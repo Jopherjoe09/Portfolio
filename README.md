@@ -1,30 +1,12 @@
-# Portfolio website
+This is my personal portfolio website, showcasing my work, experience, and projects.
+It was built with modern web technologies and designed with a clean, responsive UI.
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+🔗 Live Demo: [my-portfolio-website.vercel.app](https://jopherjoeribo.vercel.app/)
+🚀 Deployed on: Vercel
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/jophers-projects/v0-portfolio-website)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/x73CVjgUckn)
+✨ Features
+🎨 Modern UI – Styled with Tailwind CSS and ShadCN components.
+📱 Responsive Design – Optimized for desktop, tablet, and mobile.
+⚡ Smooth Animations – Scroll-based reveal animations.
+🗂 Sections – About, Experience, Timeline, Projects, and Contact.
 
-## Overview
-
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
-
-## Deployment
-
-Your project is live at:
-
-**[https://vercel.com/jophers-projects/v0-portfolio-website](https://vercel.com/jophers-projects/v0-portfolio-website)**
-
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.app/chat/projects/x73CVjgUckn](https://v0.app/chat/projects/x73CVjgUckn)**
-
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
