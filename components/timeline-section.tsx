@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Calendar, MapPin, GraduationCap } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Calendar, MapPin, GraduationCap } from "lucide-react";
 
 export function TimelineSection() {
   const timelineItems = [
@@ -16,12 +16,17 @@ export function TimelineSection() {
         "Transitioned to freelance work, taking on independent projects and building client relationships.",
         "Applied learned skills in professional settings, delivering quality solutions for various clients.",
       ],
-      badges: ["Professional Experience", "Client Projects", "Industry Skills", "Freelancing"],
+      badges: [
+        "Professional Experience",
+        "Client Projects",
+        "Industry Skills",
+        "Freelancing",
+      ],
     },
     {
       year: "2024 - 2023",
       title: "Advanced School Projects",
-      company: "University of Cebu - Main Campus",
+      company: "PHINMA - University of Pangasinan",
       icon: GraduationCap,
       color: "bg-primary",
       side: "left",
@@ -41,24 +46,33 @@ export function TimelineSection() {
     {
       year: "2022",
       title: "First School Projects",
-      company: "University of Cebu - Main Campus",
+      company: "PHINMA - University of Pangasinan",
       icon: GraduationCap,
       color: "bg-primary",
       side: "right",
       description: [
         "Started programming journey with foundational projects.",
         "Learned core concepts of web development.",
-        "Built first simple web applications with HTML, CSS, and JavaScript.",
+        "Built first simple web applications with HTML, CSS, PHP, and JavaScript.",
       ],
-      badges: ["HTML & CSS", "JavaScript Basics", "Programming Logic", "Web Fundamentals", "Problem Solving"],
+      badges: [
+        "HTML & CSS",
+        "JavaScript Basics",
+        "Programming Logic",
+        "Web Fundamentals",
+        "Problem Solving",
+        "PHP Basics",
+      ],
     },
-  ]
+  ];
 
   return (
     <section id="timeline" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 text-balance">Timeline</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 text-balance">
+            Timeline
+          </h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </div>
 
@@ -68,9 +82,12 @@ export function TimelineSection() {
 
           <div className="space-y-12">
             {timelineItems.map((item, index) => {
-              const IconComponent = item.icon
+              const IconComponent = item.icon;
               const listItems =
-                item.achievements ?? (Array.isArray(item.description) ? item.description : [item.description])
+                item.achievements ??
+                (Array.isArray(item.description)
+                  ? item.description
+                  : [item.description]);
 
               return (
                 <div
@@ -80,11 +97,17 @@ export function TimelineSection() {
                   }`}
                 >
                   {/* Content Card */}
-                  <div className={`w-full lg:w-5/12 ${item.side === "left" ? "lg:pr-8" : "lg:pl-8"}`}>
+                  <div
+                    className={`w-full lg:w-5/12 ${
+                      item.side === "left" ? "lg:pr-8" : "lg:pl-8"
+                    }`}
+                  >
                     <Card className="relative">
                       <CardHeader>
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                          <CardTitle className="text-xl text-foreground">{item.title}</CardTitle>
+                          <CardTitle className="text-xl text-foreground">
+                            {item.title}
+                          </CardTitle>
                           <Badge variant="secondary" className="w-fit">
                             <Calendar className="w-3 h-3 mr-1" />
                             {item.year}
@@ -92,7 +115,9 @@ export function TimelineSection() {
                         </div>
                         <div className="flex items-center text-muted-foreground">
                           <IconComponent className="w-4 h-4 mr-1" />
-                          <span className="font-medium text-primary">{item.company}</span>
+                          <span className="font-medium text-primary">
+                            {item.company}
+                          </span>
                         </div>
                       </CardHeader>
 
@@ -100,16 +125,23 @@ export function TimelineSection() {
                         {/* Bullet points */}
                         <div className="space-y-3">
                           {listItems.map((text, idx) => (
-                            <div key={idx} className="flex items-start space-x-2">
+                            <div
+                              key={idx}
+                              className="flex items-start space-x-2"
+                            >
                               <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                              <p className="text-muted-foreground text-pretty">{text}</p>
+                              <p className="text-muted-foreground text-pretty">
+                                {text}
+                              </p>
                             </div>
                           ))}
                         </div>
 
                         <div className="pt-4">
                           <h4 className="text-sm font-medium text-foreground mb-2">
-                            {item.achievements ? "Milestone Achievements" : "Learning Focus"}
+                            {item.achievements
+                              ? "Milestone Achievements"
+                              : "Learning Focus"}
                           </h4>
                           <div className="flex flex-wrap gap-2">
                             {item.badges.map((badge, idx) => (
@@ -133,11 +165,11 @@ export function TimelineSection() {
                   {/* Empty space for opposite side (desktop only) */}
                   <div className="hidden lg:block w-5/12"></div>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
