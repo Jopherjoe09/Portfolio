@@ -12,7 +12,9 @@ export const metadata: Metadata = {
     "Aspiring Web Developer crafting responsive websites with heart and logic. Showcasing projects in React, JavaScript, and modern web technologies.",
   generator: "v0.app",
   icons: {
-    icon: "/logo-shesh.png",
+
+    icon: "/logo.png",
+
   },
 };
 

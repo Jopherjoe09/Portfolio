@@ -4,7 +4,7 @@ import { ExperienceSection } from "@/components/experience-section";
 import { TimelineSection } from "@/components/timeline-section";
 import { ProjectsSection } from "@/components/projects-section";
 import { Footer } from "@/components/footer";
-import { ScrollAnimationReveal } from "@/components/scroll-animation-reveal";
+import { ScrollAnimationReveal } from "@/components/scroll-animation.reveal";
 
 export default function Home() {
   return (
