@@ -1,10 +1,10 @@
-import { Navigation } from "@/components/navigation"
-import { HeroSection } from "@/components/hero-section"
-import { ExperienceSection } from "@/components/experience-section"
-import { TimelineSection } from "@/components/timeline-section"
-import { ProjectsSection } from "@/components/projects-section"
-import { Footer } from "@/components/footer"
-import { ScrollAnimation } from "@/components/scroll-animation"
+import { Navigation } from "@/components/navigation";
+import { HeroSection } from "@/components/hero-section";
+import { ExperienceSection } from "@/components/experience-section";
+import { TimelineSection } from "@/components/timeline-section";
+import { ProjectsSection } from "@/components/projects-section";
+import { Footer } from "@/components/footer";
+import { ScrollAnimationReveal } from "@/components/scroll-animation.reveal";
 
 export default function Home() {
   return (
@@ -13,24 +13,24 @@ export default function Home() {
       <div id="hero">
         <HeroSection />
       </div>
-      <ScrollAnimation delay={100}>
+      <ScrollAnimationReveal delay={100}>
         <div id="timeline">
           <TimelineSection />
         </div>
-      </ScrollAnimation>
-      <ScrollAnimation delay={200}>
+      </ScrollAnimationReveal>
+      <ScrollAnimationReveal delay={200}>
         <div id="experience">
           <ExperienceSection />
         </div>
-      </ScrollAnimation>
-      <ScrollAnimation delay={300}>
+      </ScrollAnimationReveal>
+      <ScrollAnimationReveal delay={300}>
         <div id="projects">
           <ProjectsSection />
         </div>
-      </ScrollAnimation>
-      <ScrollAnimation delay={100}>
+      </ScrollAnimationReveal>
+      <ScrollAnimationReveal delay={100}>
         <Footer />
-      </ScrollAnimation>
+      </ScrollAnimationReveal>
     </main>
-  )
+  );
 }
