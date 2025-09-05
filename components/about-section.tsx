@@ -15,6 +15,7 @@ import {
   Cloud,
   Terminal,
 } from "lucide-react";
+import { Marquee } from "./magicui/marquee";
 
 export function AboutSection() {
   const techStack = [
@@ -93,23 +94,21 @@ export function AboutSection() {
               <h3 className="text-2xl font-semibold text-foreground mb-6 text-center">
                 Tech Stack
               </h3>
-              <div className="relative overflow-hidden">
-                <div className="flex animate-marquee whitespace-nowrap">
-                  {techStack.concat(techStack).map((tech, index) => {
-                    const IconComponent = tech.icon;
-                    return (
-                      <Badge
-                        key={index}
-                        variant="secondary"
-                        className="mx-2 text-sm py-2 px-4 flex-shrink-0 flex items-center gap-2"
-                      >
-                        <IconComponent className={`w-4 h-4 ${tech.color}`} />
-                        {tech.name}
-                      </Badge>
-                    );
-                  })}
-                </div>
-              </div>
+              <Marquee pauseOnHover repeat={6} className="py-4">
+                {techStack.map((tech, index) => {
+                  const IconComponent = tech.icon;
+                  return (
+                    <Badge
+                      key={index}
+                      variant="secondary"
+                      className="mx-2 text-sm py-2 px-4 flex-shrink-0 flex items-center gap-2"
+                    >
+                      <IconComponent className={`w-4 h-4 ${tech.color}`} />
+                      {tech.name}
+                    </Badge>
+                  );
+                })}
+              </Marquee>
             </CardContent>
           </Card>
 
