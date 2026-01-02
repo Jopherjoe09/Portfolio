@@ -23,7 +23,6 @@ export function AboutSection() {
     { name: "React.js", icon: Layers, color: "text-blue-500" },
     { name: "Node.js", icon: Server, color: "text-green-600" },
     { name: "Express.js", icon: Zap, color: "text-gray-700" },
-    { name: "PHP", icon: Code, color: "text-indigo-600" },
     { name: "HTML5", icon: Globe, color: "text-orange-500" },
     { name: "CSS3", icon: Palette, color: "text-blue-600" },
     { name: "Tailwind CSS", icon: Palette, color: "text-cyan-500" },
@@ -33,22 +32,23 @@ export function AboutSection() {
     { name: "ClickUp", icon: Settings, color: "text-purple-500" },
     { name: "MySQL", icon: Database, color: "text-blue-700" },
     { name: "MongoDB", icon: Database, color: "text-green-500" },
+    { name: "PostgreSQL", icon: Database, color: "text-green-500" },
     { name: "TypeScript", icon: FileCode, color: "text-blue-600" },
     { name: "Next.js", icon: Layers, color: "text-black" },
     { name: "Bootstrap", icon: Palette, color: "text-purple-600" },
     { name: "jQuery", icon: Code, color: "text-blue-500" },
-    { name: "REST APIs", icon: Cloud, color: "text-green-600" },
     { name: "JSON", icon: Terminal, color: "text-yellow-600" },
+    { name: "Velo", icon: FileCode, color: "text-yellow-600" },
   ];
 
   const tools = [
     {
       category: "Development",
-      items: ["VS Code", "Git", "GitHub", "npm"],
+      items: ["VS Code", "Git", "GitHub", "Wix"],
     },
-    { category: "Design", items: ["Figma", "Canva"] },
+    { category: "Design", items: ["Figma"] },
     { category: "Project Management", items: ["ClickUp", "Quire"] },
-    { category: "Database", items: ["MySQL", "phpMyAdmin", "MongoDB"] },
+    { category: "Database", items: ["MySQL", "MongoDB", "PostgreSQL"] },
   ];
 
   return (
@@ -66,19 +66,22 @@ export function AboutSection() {
             <CardContent className="p-8">
               <p className="text-lg text-muted-foreground leading-relaxed text-pretty mb-6">
                 Aspiring Front-End Web Developer specializing in system
-                integration, workflow automation, and access control solutions.
-                Experienced in building dynamic web applications and connecting
-                front-office operations with back-office systems to streamline
-                business processes and improve efficiency.
+                integration, workflow automation, access control solutions, and
+                Quality Assurance. Experienced in building dynamic web
+                applications, performing functional and usability testing, and
+                connecting front-office operations with back-office systems to
+                streamline business processes and improve efficiency.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed text-pretty mb-6">
                 With hands-on experience from internships, freelance projects,
-                and academic work, I specialize as a Frontend Developer,
+                and academic work, I specialize as a Front-End Developer,
                 building responsive and user-focused web applications. My
-                expertise includes JavaScript, React.js, Express.js, Node.js,
-                and TypeScript, and I’m committed to continuous learning to stay
-                updated with the latest industry trends and deliver impactful
-                solutions.
+                expertise includes JavaScript, React.js, TypeScript, Node.js,
+                Express.js, Wix (including custom logic and integrations), and
+                Quality Assurance practices such as manual testing, bug
+                tracking, and validation of system workflows, and I’m committed
+                to continuous learning to stay updated with the latest industry
+                trends and deliver impactful solutions.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
                 When I'm not coding, I enjoy exploring new frameworks,
