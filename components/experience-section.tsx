@@ -157,9 +157,10 @@ export function ExperienceSection() {
 
               <CardContent className="p-6">
                 <p className="text-muted-foreground text-pretty mb-4">
-                  Transitioned to freelance work, taking on independent projects
-                  and building direct client relationships while delivering
-                  custom web solutions.
+                  Transitioned to freelance work, handling independent projects
+                  and client engagements while delivering responsive and
+                  scalable web solutions using Next.js, React, and Wix with
+                  custom functionality and integrations.
                 </p>
 
                 <div className="pt-2">
@@ -173,6 +174,7 @@ export function ExperienceSection() {
                     <Badge variant="outline">Node.js</Badge>
                     <Badge variant="outline">Express.js</Badge>
                     <Badge variant="outline">Supabase</Badge>
+                    <Badge variant="outline">Wix</Badge>
                   </div>
                 </div>
 
