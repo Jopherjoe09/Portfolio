@@ -56,7 +56,7 @@ export function HeroSection() {
             <div className="relative">
               <div className="w-72 h-96 sm:w-80 sm:h-[28rem] relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/jopher-profile.png"
+                  src="/images/dingdong.jpg"
                   alt="Jopher Joe Ribo - Professional graduation photo"
                   fill
                   className="object-cover object-top"
