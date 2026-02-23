@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   /* Updated color tokens to match portfolio design brief with soft beige background and green accents */
   --background: oklch(0.97 0.01 85); /* #f6f2ef - Soft beige background */
