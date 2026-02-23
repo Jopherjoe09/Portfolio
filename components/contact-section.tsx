@@ -168,14 +168,6 @@ export function ContactSection() {
             </CardContent>
           </Card>
         </div>
-
-        <footer className="mt-20 pt-8 border-t border-border">
-          <div className="flex flex-col items-center space-y-4">
-            <p className="text-sm text-muted-foreground text-center">
-              © 2025 Jopher Joe Ribo. All rights reserved.
-            </p>
-          </div>
-        </footer>
       </div>
     </section>
   );
