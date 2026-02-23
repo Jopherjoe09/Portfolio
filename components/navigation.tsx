@@ -1,20 +1,29 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Code2 } from "lucide-react"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
-  const pathname = usePathname()
+  const [activeSection, setActiveSection] = useState("hero")
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", href: "#hero" },
+    { name: "About", href: "#about" },
+    { name: "Contact", href: "#contact" },
   ]
+
+  useEffect(() => {
+    const hash = typeof window !== "undefined" ? window.location.hash.slice(1) || "hero" : "hero"
+    setActiveSection(hash)
+    const handleHashChange = () => setActiveSection(window.location.hash.slice(1) || "hero")
+    window.addEventListener("hashchange", handleHashChange)
+    return () => window.removeEventListener("hashchange", handleHashChange)
+  }, [])
+
+  const isActive = (href: string) => (href === "#hero" ? activeSection === "hero" : activeSection === href.slice(1))
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-sm border-b border-border">
@@ -31,20 +40,20 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.name}
                 href={item.href}
                 className={`transition-all duration-300 hover:scale-105 active:scale-95 relative group ${
-                  pathname === item.href ? "text-primary" : "text-foreground hover:text-primary"
+                  isActive(item.href) ? "text-primary" : "text-foreground hover:text-primary"
                 }`}
               >
                 {item.name}
                 <span
                   className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
-                    pathname === item.href ? "w-full" : "w-0 group-hover:w-full"
+                    isActive(item.href) ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 ></span>
-              </Link>
+              </a>
             ))}
           </div>
 
@@ -61,16 +70,16 @@ export function Navigation() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-card border-t border-border">
               {navItems.map((item) => (
-                <Link
+                <a
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
                   className={`block px-3 py-2 transition-all duration-300 hover:bg-primary/5 rounded-md active:scale-95 ${
-                    pathname === item.href ? "text-primary" : "text-foreground hover:text-primary"
+                    isActive(item.href) ? "text-primary" : "text-foreground hover:text-primary"
                   }`}
                 >
                   {item.name}
-                </Link>
+                </a>
               ))}
             </div>
           </div>

@@ -1,54 +1,71 @@
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import type { LucideIcon } from "lucide-react";
 import {
-  Code,
   Database,
   Palette,
   Settings,
-  Globe,
   Server,
   GitBranch,
   Layers,
-  Zap,
-  FileCode,
   Monitor,
-  Cloud,
-  Terminal,
+  LayoutGrid,
 } from "lucide-react";
-import { Marquee } from "./magicui/marquee";
+
+const techCategories: {
+  title: string;
+  icon: LucideIcon;
+  items: { name: string; image: string }[];
+}[] = [
+  {
+    title: "Front-end",
+    icon: Layers,
+    items: [
+      { name: "HTML", image: "/html-5.png" },
+      { name: "CSS", image: "/css-3.png" },
+      { name: "JavaScript", image: "/js.png" },
+      { name: "React JS", image: "/react.png" },
+      { name: "Next JS", image: "/next.png" },
+    ],
+  },
+  {
+    title: "Styling",
+    icon: Palette,
+    items: [
+      { name: "SHADCN", image: "/shadcn.png" },
+      { name: "Tailwind", image: "/tailwind.png" },
+    ],
+  },
+  {
+    title: "Back-end",
+    icon: Server,
+    items: [
+      { name: "Node JS", image: "/node.png" },
+      { name: "Express JS", image: "/express.jpg" },
+      { name: "Supabase", image: "/supabase.jpg" },
+      { name: "MongoDB", image: "/mongodb.png" },
+    ],
+  },
+  {
+    title: "CMS",
+    icon: LayoutGrid,
+    items: [{ name: "Wix", image: "/wix.png" }],
+  },
+  {
+    title: "Design",
+    icon: Monitor,
+    items: [{ name: "Figma", image: "/figma.png" }],
+  },
+];
 
 export function AboutSection() {
-  const techStack = [
-    { name: "JavaScript", icon: FileCode, color: "text-yellow-500" },
-    { name: "React.js", icon: Layers, color: "text-blue-500" },
-    { name: "Node.js", icon: Server, color: "text-green-600" },
-    { name: "Express.js", icon: Zap, color: "text-gray-700" },
-    { name: "HTML5", icon: Globe, color: "text-orange-500" },
-    { name: "CSS3", icon: Palette, color: "text-blue-600" },
-    { name: "Tailwind CSS", icon: Palette, color: "text-cyan-500" },
-    { name: "Git", icon: GitBranch, color: "text-orange-600" },
-    { name: "GitHub", icon: GitBranch, color: "text-gray-800" },
-    { name: "Figma", icon: Monitor, color: "text-pink-500" },
-    { name: "ClickUp", icon: Settings, color: "text-purple-500" },
-    { name: "MySQL", icon: Database, color: "text-blue-700" },
-    { name: "MongoDB", icon: Database, color: "text-green-500" },
-    { name: "PostgreSQL", icon: Database, color: "text-green-500" },
-    { name: "TypeScript", icon: FileCode, color: "text-blue-600" },
-    { name: "Next.js", icon: Layers, color: "text-black" },
-    { name: "Bootstrap", icon: Palette, color: "text-purple-600" },
-    { name: "jQuery", icon: Code, color: "text-blue-500" },
-    { name: "JSON", icon: Terminal, color: "text-yellow-600" },
-    { name: "Velo", icon: FileCode, color: "text-yellow-600" },
-  ];
-
   const tools = [
     {
       category: "Development",
-      items: ["VS Code", "Git", "GitHub", "Wix"],
+      items: ["VS Code", "Git", "GitHub"],
     },
-    { category: "Design", items: ["Figma"] },
     { category: "Project Management", items: ["ClickUp", "Quire"] },
-    { category: "Database", items: ["MySQL", "MongoDB", "PostgreSQL"] },
   ];
 
   return (
@@ -64,30 +81,12 @@ export function AboutSection() {
         <div className="max-w-4xl mx-auto space-y-8">
           <Card className="overflow-hidden">
             <CardContent className="p-8">
-              <p className="text-lg text-muted-foreground leading-relaxed text-pretty mb-6">
-                Aspiring Front-End Web Developer specializing in system
-                integration, workflow automation, access control solutions, and
-                Quality Assurance. Experienced in building dynamic web
-                applications, performing functional and usability testing, and
-                connecting front-office operations with back-office systems to
-                streamline business processes and improve efficiency.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed text-pretty mb-6">
-                With hands-on experience from internships, freelance projects,
-                and academic work, I specialize as a Front-End Developer,
-                building responsive and user-focused web applications. My
-                expertise includes JavaScript, React.js, TypeScript, Node.js,
-                Express.js, Wix (including custom logic and integrations), and
-                Quality Assurance practices such as manual testing, bug
-                tracking, and validation of system workflows, and I’m committed
-                to continuous learning to stay updated with the latest industry
-                trends and deliver impactful solutions.
-              </p>
               <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
-                When I'm not coding, I enjoy exploring new frameworks,
-                contributing to open-source projects, and collaborating with
-                fellow developers. I'm always excited to take on new challenges
-                that push my skills to the next level.
+                Aspiring Front-End Web Developer with experience in building
+                responsive, user-focused web applications. I work with React,
+                Next.js, Node.js, and modern tooling, and CMS such as Wix. I
+                enjoy QA, system integration, and continuous learning. Always
+                open to new challenges and collaboration.
               </p>
             </CardContent>
           </Card>
@@ -97,21 +96,44 @@ export function AboutSection() {
               <h3 className="text-2xl font-semibold text-foreground mb-6 text-center">
                 Tech Stack
               </h3>
-              <Marquee pauseOnHover repeat={6} className="py-4">
-                {techStack.map((tech, index) => {
-                  const IconComponent = tech.icon;
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {techCategories.map((category) => {
+                  const IconComponent = category.icon;
                   return (
-                    <Badge
-                      key={index}
-                      variant="secondary"
-                      className="mx-2 text-sm py-2 px-4 flex-shrink-0 flex items-center gap-2"
+                    <div
+                      key={category.title}
+                      className="rounded-lg border border-border bg-card p-4 space-y-3"
                     >
-                      <IconComponent className={`w-4 h-4 ${tech.color}`} />
-                      {tech.name}
-                    </Badge>
+                      <div className="flex items-center gap-2">
+                        <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <IconComponent className="w-5 h-5 text-primary" />
+                        </div>
+                        <h4 className="font-semibold text-foreground">
+                          {category.title}
+                        </h4>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {category.items.map((item) => (
+                          <Badge
+                            key={item.name}
+                            variant="secondary"
+                            className="text-xs font-medium flex items-center gap-1.5 py-1.5"
+                          >
+                            <Image
+                              src={item.image}
+                              alt={item.name}
+                              width={14}
+                              height={14}
+                              className="shrink-0 rounded-sm object-contain"
+                            />
+                            {item.name}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
                   );
                 })}
-              </Marquee>
+              </div>
             </CardContent>
           </Card>
 
