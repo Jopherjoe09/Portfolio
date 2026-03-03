@@ -5,15 +5,11 @@ import { Button } from "@/components/ui/button"
 import { Menu, X, Code2 } from "lucide-react"
 import Link from "next/link"
 
+import { navItems } from "@/data/navigation"
+
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("hero")
-
-  const navItems = [
-    { name: "Home", href: "#hero" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
-  ]
 
   useEffect(() => {
     const hash = typeof window !== "undefined" ? window.location.hash.slice(1) || "hero" : "hero"
