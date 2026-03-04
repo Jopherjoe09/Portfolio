@@ -4,6 +4,16 @@ export type Project = {
   technologies: string[];
   image: string;
   liveUrl: string;
+  role: string;
+  duration: string;
+  team: string;
+  gallery?: string[];
+  /** Optional: tablet view screenshot */
+  tabletImage?: string;
+  /** Optional: mobile view screenshot */
+  mobileImage?: string;
+  /** Optional: color theme / design system image */
+  themeImage?: string;
 };
 
 export const projects: Project[] = [
@@ -21,6 +31,9 @@ export const projects: Project[] = [
     ],
     image: "/aignition.png",
     liveUrl: "https://aignition-frontend.vercel.app/",
+    role: "Frontend Developer",
+    duration: "6 months",
+    team: "—",
   },
   {
     title: "WEB-BASED STREAMLINE ENROLLMENT SYSTEM",
@@ -29,6 +42,9 @@ export const projects: Project[] = [
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB"],
     image: "/enrollment.png",
     liveUrl: "#",
+    role: "Full Stack Developer",
+    duration: "3 months",
+    team: "—",
   },
   {
     title: "WEB-BASED ATTENDANCE SYSTEM",
@@ -37,6 +53,9 @@ export const projects: Project[] = [
     technologies: ["React.js", "Node.js", "Express.js", "Supabase"],
     image: "/attendance.png",
     liveUrl: "https://attendance-system-one-teal.vercel.app/",
+    role: "Full Stack Developer",
+    duration: "3 months",
+    team: "—",
   },
   {
     title: "Travel & Tour",
@@ -45,5 +64,8 @@ export const projects: Project[] = [
     technologies: ["PHP", "HTML", "CSS", "MySQL"],
     image: "/travel&tour.png",
     liveUrl: "#",
+    role: "Full Stack Developer",
+    duration: "3 months",
+    team: "—",
   },
 ];
