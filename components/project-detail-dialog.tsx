@@ -108,14 +108,14 @@ export function ProjectDetailDialog({
             </div>
 
             {/* Right column: Project gallery */}
-            <div className="flex flex-col p-4 sm:p-6 lg:p-8 lg:overflow-y-auto lg:min-h-0 bg-muted/20 lg:border-l border-t lg:border-t-0 mt-4 lg:mt-0 pt-4 lg:pt-0">
+            <div className="flex flex-col p-4 sm:p-6 lg:p-8 lg:overflow-y-auto lg:min-h-0 lg:flex-1 bg-muted/20 lg:border-l border-t lg:border-t-0 mt-4 lg:mt-0 pt-4 lg:pt-0">
               <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold uppercase tracking-wider text-foreground pt-2 sm:pt-4 pb-3 sm:pb-4 shrink-0">
                 Project Gallery
               </h2>
-              <Card className="border shadow-sm lg:flex-1 lg:min-h-0 lg:flex lg:flex-col">
-                <CardContent className="pt-4 pb-4 px-4 sm:pt-6 sm:pb-6 sm:px-6 flex flex-col gap-4">
-                  {/* Main image: fixed aspect on mobile/tablet to prevent overlap */}
-                  <div className="relative w-full aspect-video min-h-[200px] sm:min-h-[240px] rounded-lg overflow-hidden border bg-muted/30 lg:flex-1 lg:min-h-[240px]">
+              <Card className="border shadow-sm flex-1 min-h-0 flex flex-col">
+                <CardContent className="pt-4 pb-4 px-4 sm:pt-6 sm:pb-6 sm:px-6 flex flex-col gap-4 flex-1 min-h-0">
+                  {/* Main image: fills card on desktop to reduce bottom gap */}
+                  <div className="relative w-full min-h-[240px] rounded-lg overflow-hidden border bg-muted/30 flex-1 aspect-video lg:aspect-auto">
                     <Image
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
