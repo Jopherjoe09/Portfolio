@@ -109,7 +109,7 @@ export function ProjectDetailDialog({
 
             {/* Right column: Project gallery */}
             <div className="flex flex-col p-4 sm:p-6 lg:p-8 lg:overflow-y-auto lg:min-h-0 bg-muted/20 lg:border-l border-t lg:border-t-0 mt-4 lg:mt-0 pt-4 lg:pt-0">
-              <h2 className="text-sm sm:text-base font-semibold uppercase tracking-wider text-foreground mb-3 sm:mb-4 shrink-0">
+              <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold uppercase tracking-wider text-foreground pt-2 sm:pt-4 pb-3 sm:pb-4 shrink-0">
                 Project Gallery
               </h2>
               <Card className="border shadow-sm lg:flex-1 lg:min-h-0 lg:flex lg:flex-col">
