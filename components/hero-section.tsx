@@ -32,8 +32,8 @@ export function HeroSection() {
                 size="lg"
                 onClick={() => {
                   const link = document.createElement("a");
-                  link.href = "/file/Jopher Joe Ribo (Resume).pdf";
-                  link.download = "Jopher Joe Ribo (Resume).pdf";
+                  link.href = "/file/Jopher Joe Ribo - Resume.pdf";
+                  link.download = "Jopher Joe Ribo - Resume.pdf";
                   document.body.appendChild(link);
                   link.click();
                   document.body.removeChild(link);
