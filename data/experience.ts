@@ -21,6 +21,8 @@ export const experienceItems: ExperienceItem[] = [
       "Participated in the designing and documentation of the Travel Mid Office System, with a focus on system scalability, long-term growth, and smooth knowledge transfer.",
       "Engaged with stakeholders and mentors to gather requirements, develop design solutions, and contribute to the project's successful delivery.",
       "Contributed to the development of a prototype checklist tool that helps farmers manage their agricultural operations based on selected areas from a farm map.",
+      "Developed a system for recording and submitting daily farm/field activities via a mobile app and a backend API that handles auth, form submission, reporting, and data sync.",
+      "Developed a multi-platform system for managing parking: a mobile app for drivers (reservations, bookings, payments, vehicles, violations, notifications) and a web dashboard for administrators (users, customers, vehicles, violations, parking sites, slots, rates, and hardware). Both clients connect to a shared backend for data.",
     ],
     technologies: [
       "TypeScript",

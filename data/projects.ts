@@ -30,7 +30,7 @@ export const projects: Project[] = [
       "Supabase",
     ],
     image: "/aignition.png",
-    liveUrl: "https://aignition-frontend.vercel.app/",
+    liveUrl: "https://www.aignitionglobaleducationalliance.net/",
     role: "Frontend Developer",
     duration: "6 months",
     team: "—",
