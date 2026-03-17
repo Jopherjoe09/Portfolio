@@ -33,7 +33,7 @@ export const projects: Project[] = [
     liveUrl: "https://www.aignitionglobaleducationalliance.net/",
     role: "Frontend Developer",
     duration: "6 months",
-    team: "—",
+    team: "Freelance Project",
   },
   {
     title: "WEB-BASED STREAMLINE ENROLLMENT SYSTEM",
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     liveUrl: "#",
     role: "Full Stack Developer",
     duration: "3 months",
-    team: "—",
+    team: "School Project",
   },
   {
     title: "WEB-BASED ATTENDANCE SYSTEM",
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     liveUrl: "https://attendance-system-one-teal.vercel.app/",
     role: "Full Stack Developer",
     duration: "3 months",
-    team: "—",
+    team: "School Project",
   },
   {
     title: "Travel & Tour",
@@ -66,6 +66,23 @@ export const projects: Project[] = [
     liveUrl: "#",
     role: "Full Stack Developer",
     duration: "3 months",
-    team: "—",
+    team: "School Project",
+  },
+  {
+    title: "Home Scape",
+    description:
+      "A modern real estate listing web app for browsing properties, filtering by type and location, viewing details, saving favorites, and connecting with agents.",
+    technologies: [
+      "React 18",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Shadcn/UI",
+    ],
+    image: "/homescape.png",
+    liveUrl: "https://real-state-home-scape.vercel.app/",
+    role: "UI/UX Designer & Frontend Developer",
+    duration: "1 Week",
+    team: "Solo Project",
   },
 ];
