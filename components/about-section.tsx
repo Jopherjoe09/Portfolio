@@ -1,15 +1,10 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  techCategories,
-  tools,
-  certifications,
-  aboutBio,
-} from "@/data/about";
+import { techCategories, aboutBio } from "@/data/about";
+import { CertificationsSection } from "@/components/certifications-section";
 
 export function AboutSection() {
-
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
@@ -57,13 +52,15 @@ export function AboutSection() {
                             variant="secondary"
                             className="text-xs font-medium flex items-center gap-1.5 py-1.5"
                           >
-                            <Image
-                              src={item.image}
-                              alt={item.name}
-                              width={14}
-                              height={14}
-                              className="shrink-0 rounded-sm object-contain"
-                            />
+                            {item.image ? (
+                              <Image
+                                src={item.image}
+                                alt={item.name}
+                                width={14}
+                                height={14}
+                                className="shrink-0 rounded-sm object-contain"
+                              />
+                            ) : null}
                             {item.name}
                           </Badge>
                         ))}
@@ -75,50 +72,11 @@ export function AboutSection() {
             </CardContent>
           </Card>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-4">
-                  Certifications
-                </h3>
-                <div className="space-y-2">
-                  {certifications.map((cert) => (
-                    <div
-                      key={cert.name}
-                      className="flex justify-between items-center"
-                    >
-                      <span className="text-black font-medium">{cert.name}</span>
-                      <Badge variant="secondary">{cert.year}</Badge>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-6">
-                  Tools & Software
-                </h3>
-                <div className="space-y-4">
-                  {tools.map((toolGroup) => (
-                    <div key={toolGroup.category}>
-                      <h4 className="text-sm font-medium text-primary mb-2">
-                        {toolGroup.category}
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {toolGroup.items.map((tool) => (
-                          <Badge key={tool} variant="outline">
-                            {tool}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+          <Card className="overflow-visible">
+            <CardContent className="overflow-visible p-6">
+              <CertificationsSection />
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
