@@ -19,7 +19,8 @@ export function HeroSection() {
                 </span>
               </h1>
               <p className="text-xl sm:text-2xl text-muted-foreground mb-6 text-balance">
-                Aspiring Web Developer Turning Ideas into Code
+                Where Design Meets Development. Building fast, beautiful web
+                applications.
               </p>
               <p className="text-lg text-muted-foreground max-w-2xl lg:max-w-none text-pretty">
                 Constantly growing, I create web experiences that are clean,
