@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s | Jopher Joe Ribo",
   },
   description:
-    "Aspiring Web Developer crafting responsive websites with heart and logic. Showcasing projects in React, Next.js, JavaScript, and modern web technologies.",
+    "Web Developer crafting responsive websites with heart and logic. Showcasing projects in React, Next.js, JavaScript, and modern web technologies.",
   keywords: [
     "web developer",
     "frontend developer",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Jopher Joe Ribo - Portfolio",
     title: "Jopher Joe Ribo - Web Developer Portfolio",
     description:
-      "Aspiring Web Developer crafting responsive websites with heart and logic. Showcasing projects in React, Next.js, and modern web technologies.",
+      "Web Developer crafting responsive websites with heart and logic. Showcasing projects in React, Next.js, and modern web technologies.",
     images: [
       {
         url: "/images/jopher-profile.png",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Jopher Joe Ribo - Web Developer Portfolio",
     description:
-      "Aspiring Web Developer crafting responsive websites with heart and logic. Showcasing projects in React, Next.js, and modern web technologies.",
+      "Web Developer crafting responsive websites with heart and logic. Showcasing projects in React, Next.js, and modern web technologies.",
   },
   robots: {
     index: true,
