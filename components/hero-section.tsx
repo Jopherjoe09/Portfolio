@@ -19,8 +19,8 @@ export function HeroSection() {
                 </span>
               </h1>
               <p className="text-xl sm:text-2xl text-muted-foreground mb-6 text-balance">
-                Where Design Meets Development. Building fast, beautiful web
-                applications.
+                Building fast, accessible web apps — from pixel-perfect UI to
+                backend APIs.
               </p>
               <p className="text-lg text-muted-foreground max-w-2xl lg:max-w-none text-pretty">
                 Constantly growing, I create web experiences that are clean,
@@ -29,19 +29,13 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-12">
-              <Button
-                size="lg"
-                onClick={() => {
-                  const link = document.createElement("a");
-                  link.href = "/file/Jopher Joe Ribo - Resume.pdf";
-                  link.download = "Jopher Joe Ribo - Resume.pdf";
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-                }}
-                className="w-full sm:w-auto"
-              >
-                Download Resume
+              <Button size="lg" asChild className="w-full sm:w-auto">
+                <a
+                  href="/Jopher Joe Ribo -Resume.pdf"
+                  download="Jopher Joe Ribo - Resume.pdf"
+                >
+                  Download Resume
+                </a>
               </Button>
               <Button
                 variant="outline"

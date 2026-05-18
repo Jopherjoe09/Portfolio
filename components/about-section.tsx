@@ -1,8 +1,29 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { techCategories, aboutBio } from "@/data/about";
+import { techCategories, aboutBio, type TechSkillItem } from "@/data/about";
 import { CertificationsSection } from "@/components/certifications-section";
+
+function TechSkillBadge({ item }: { item: TechSkillItem }) {
+  return (
+    <Badge
+      variant="secondary"
+      className="text-xs font-medium flex items-center gap-1.5 py-1.5"
+    >
+      {item.image ? (
+        <Image
+          src={item.image}
+          alt={item.name}
+          width={14}
+          height={14}
+          className="shrink-0 rounded-sm object-contain"
+          unoptimized
+        />
+      ) : null}
+      {item.name}
+    </Badge>
+  );
+}
 
 export function AboutSection() {
   return (
@@ -47,22 +68,7 @@ export function AboutSection() {
                       </div>
                       <div className="flex flex-wrap gap-2">
                         {category.items.map((item) => (
-                          <Badge
-                            key={item.name}
-                            variant="secondary"
-                            className="text-xs font-medium flex items-center gap-1.5 py-1.5"
-                          >
-                            {item.image ? (
-                              <Image
-                                src={item.image}
-                                alt={item.name}
-                                width={14}
-                                height={14}
-                                className="shrink-0 rounded-sm object-contain"
-                              />
-                            ) : null}
-                            {item.name}
-                          </Badge>
+                          <TechSkillBadge key={item.name} item={item} />
                         ))}
                       </div>
                     </div>
