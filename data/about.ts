@@ -4,16 +4,25 @@ import {
   Server,
   Layers,
   Monitor,
-  LayoutGrid,
   Code2,
+  LayoutGrid,
   Kanban,
 } from "lucide-react";
 
-export const techCategories: {
+export type TechSkillItem = {
+  name: string;
+  image?: string;
+};
+
+export type TechCategoryGroup = {
   title: string;
   icon: LucideIcon;
-  items: { name: string; image?: string }[];
-}[] = [
+  items: TechSkillItem[];
+};
+
+const DEVICON_CDN = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
+
+export const techCategories: TechCategoryGroup[] = [
   {
     title: "Front-end",
     icon: Layers,
@@ -21,32 +30,30 @@ export const techCategories: {
       { name: "HTML", image: "/html-5.png" },
       { name: "CSS", image: "/css-3.png" },
       { name: "JavaScript", image: "/js.png" },
+      { name: "TypeScript" },
       { name: "React JS", image: "/react.png" },
-      { name: "Next JS", image: "/next.png" },
+      { name: "Next.js", image: "/next.png" },
     ],
   },
   {
     title: "Styling",
     icon: Palette,
     items: [
-      { name: "SHADCN", image: "/shadcn.png" },
       { name: "Tailwind", image: "/tailwind.png" },
+      { name: "SHADCN", image: "/shadcn.png" },
     ],
   },
   {
     title: "Back-end",
     icon: Server,
     items: [
-      { name: "Node JS", image: "/node.png" },
-      { name: "Express JS", image: "/express.jpg" },
+      { name: "Java", image: `${DEVICON_CDN}/java/java-original.svg` },
+      { name: "Spring Boot", image: `${DEVICON_CDN}/spring/spring-original.svg` },
       { name: "Supabase", image: "/supabase.jpg" },
+      { name: "Node.js", image: "/node.png" },
+      { name: "Express.js", image: "/express.jpg" },
       { name: "MongoDB", image: "/mongodb.png" },
     ],
-  },
-  {
-    title: "CMS",
-    icon: LayoutGrid,
-    items: [{ name: "Wix", image: "/wix.png" }],
   },
   {
     title: "Design",
@@ -60,7 +67,13 @@ export const techCategories: {
       { name: "VS Code", image: "/tools/vs_code.png" },
       { name: "Git Bash", image: "/tools/git_bash.png" },
       { name: "GitHub", image: "/tools/github.png" },
+      { name: "SonarQube", image: `${DEVICON_CDN}/sonarqube/sonarqube-original.svg` },
     ],
+  },
+  {
+    title: "CMS",
+    icon: LayoutGrid,
+    items: [{ name: "Wix", image: "/wix.png" }],
   },
   {
     title: "Project Management",

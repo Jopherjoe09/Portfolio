@@ -64,7 +64,7 @@ export function ContactSection() {
                   <div>
                     <p className="text-sm text-primary">Email</p>
                     <a
-                      href="mailto:joejopher@gmail.com"
+                      href="mailto:jopherjoeribo.work@gmail.com"
                       className="text-foreground hover:text-primary transition-colors"
                     >
                       jopherjoeribo.work@gmail.com
