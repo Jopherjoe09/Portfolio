@@ -4,6 +4,7 @@ export type Project = {
   technologies: string[];
   image: string;
   liveUrl: string;
+  githubUrl: string;
   role: string;
   duration: string;
   team: string;
@@ -31,6 +32,7 @@ export const projects: Project[] = [
     ],
     image: "/aignition.png",
     liveUrl: "https://www.aignitionglobaleducationalliance.net/",
+    githubUrl: "#",
     role: "Frontend Developer",
     duration: "6 months",
     team: "Freelance Project",
@@ -42,6 +44,7 @@ export const projects: Project[] = [
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB"],
     image: "/enrollment.png",
     liveUrl: "#",
+    githubUrl: "#",
     role: "Full Stack Developer",
     duration: "3 months",
     team: "School Project",
@@ -53,6 +56,7 @@ export const projects: Project[] = [
     technologies: ["React.js", "Node.js", "Express.js", "Supabase"],
     image: "/attendance.png",
     liveUrl: "https://attendance-system-one-teal.vercel.app/",
+    githubUrl: "#",
     role: "Full Stack Developer",
     duration: "3 months",
     team: "School Project",
@@ -64,6 +68,7 @@ export const projects: Project[] = [
     technologies: ["PHP", "HTML", "CSS", "MySQL"],
     image: "/travel&tour.png",
     liveUrl: "#",
+    githubUrl: "#",
     role: "Full Stack Developer",
     duration: "3 months",
     team: "School Project",
@@ -81,6 +86,7 @@ export const projects: Project[] = [
     ],
     image: "/homescape.png",
     liveUrl: "https://real-state-home-scape.vercel.app/",
+    githubUrl: "#",
     role: "UI/UX Designer & Frontend Developer",
     duration: "1 Week",
     team: "Solo Project",
