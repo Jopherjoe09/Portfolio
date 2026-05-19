@@ -1,6 +1,5 @@
 import type { LucideIcon } from "lucide-react";
 import {
-  Palette,
   Server,
   Layers,
   Monitor,
@@ -33,12 +32,6 @@ export const techCategories: TechCategoryGroup[] = [
       { name: "TypeScript" },
       { name: "React JS", image: "/react.png" },
       { name: "Next.js", image: "/next.png" },
-    ],
-  },
-  {
-    title: "Styling",
-    icon: Palette,
-    items: [
       { name: "Tailwind", image: "/tailwind.png" },
       { name: "SHADCN", image: "/shadcn.png" },
     ],
@@ -58,7 +51,10 @@ export const techCategories: TechCategoryGroup[] = [
   {
     title: "Design",
     icon: Monitor,
-    items: [{ name: "Figma", image: "/figma.png" }],
+    items: [
+      { name: "Figma", image: "/figma.png" },
+      { name: "Canva", image: "/canva.svg" },
+    ],
   },
   {
     title: "Development",
@@ -68,6 +64,10 @@ export const techCategories: TechCategoryGroup[] = [
       { name: "Git Bash", image: "/tools/git_bash.png" },
       { name: "GitHub", image: "/tools/github.png" },
       { name: "SonarQube", image: `${DEVICON_CDN}/sonarqube/sonarqube-original.svg` },
+      {
+        name: "n8n",
+        image: "https://cdn.jsdelivr.net/npm/simple-icons/icons/n8n.svg",
+      },
     ],
   },
   {
