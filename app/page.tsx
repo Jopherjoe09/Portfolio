@@ -4,6 +4,7 @@ import { AboutSection } from "@/components/about-section";
 import { ExperienceSection } from "@/components/experience-section";
 import { TimelineSection } from "@/components/timeline-section";
 import { ProjectsSection } from "@/components/projects-section";
+import { DesignsSection } from "@/components/designs-section";
 import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/footer";
 import { ScrollAnimationReveal } from "@/components/scroll-animation.reveal";
@@ -34,6 +35,11 @@ export default function Home() {
         </div>
       </ScrollAnimationReveal>
       <ScrollAnimationReveal delay={500}>
+        <div id="designs">
+          <DesignsSection />
+        </div>
+      </ScrollAnimationReveal>
+      <ScrollAnimationReveal delay={600}>
         <ContactSection />
       </ScrollAnimationReveal>
       <ScrollAnimationReveal delay={100}>
