@@ -105,6 +105,25 @@ export type Certification = {
 
 export const certifications: Certification[] = [
   {
+    id: 5,
+    issuer: "Accenture",
+    issuerShort: "A",
+    title: "Tech AmplifAI Program",
+    date: "2026-06-29",
+    type: "Certificate of Participation",
+    field: "Artificial Intelligence",
+    skills: [
+      "Generative AI",
+      "Technology",
+      "Professional Development",
+      "Collaboration",
+      "Innovation",
+    ],
+    credentialUrl: "/certificates/Jopher_Joe_Simon_Ribo_Certificate_Accenture.pdf",
+    image: "/certificates/accenture-certificate.png",
+    color: "violet",
+  },
+  {
     id: 1,
     issuer: "Wadhwani Foundation",
     issuerShort: "W",
